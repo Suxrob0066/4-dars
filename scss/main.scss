@@ -465,6 +465,36 @@
       border: 2 px solid var(--clr-orange);
     }
  }
+
+ .method__link{
+    display: inline-block;
+    margin: 0 auto;
+    font-family: Inter;
+    margin: 20px 0;
+    text-align: center;
+    transition: all 0.3s linear;
+  
+    @include buttonStyle(
+      $BTN_W: 399px,
+      $BTN_PY: 17px,
+      $BTN_BG_CLR: var(--clr-orange),
+      $BTN_BR_Radius: 10px,
+      $BTN_Border_CLR: var(--clr-orange),
+      $BTN_FS: 17px,
+      $BTN_FW: 500,
+      $BTN_LH: 20.57px,
+      $BTN_CLR: var(--clr-white),
+      $BTN_CASE: none
+    );
+  
+    &:hover {
+      cursor: pointer;
+      background-color: transparent;
+      color: var(--clr-orange);
+      border: 2 px solid var(--clr-orange);
+    }
+ }
+ 
  
  
  

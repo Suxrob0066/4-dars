@@ -435,6 +435,33 @@
   border: 2 px solid var(--clr-orange);
 }
 
+.method__link {
+  display: inline-block;
+  margin: 0 auto;
+  font-family: Inter;
+  margin: 20px 0;
+  text-align: center;
+  transition: all 0.3s linear;
+  width: 399px;
+  padding: 17px 0;
+  background-color: var(--clr-orange);
+  border-radius: 10px;
+  border: 1px solid var(--clr-orange);
+  transition: all 0.3s linear;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 20.57px;
+  color: var(--clr-white);
+  cursor: pointer;
+  text-transform: none;
+}
+.method__link:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--clr-orange);
+  border: 2 px solid var(--clr-orange);
+}
+
 * {
   margin: 0;
   padding: 0;
