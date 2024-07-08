@@ -1,0 +1,217 @@
+.hero-section {
+    padding: 180px 0 93px 0;
+    background-image: url(../images/hero-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 150vh;
+  }
+  .hero {
+    @include display($items: none, $space: none, $gap: 85px);
+  }
+  .hero__form {
+    width: 449px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--clr-gray);
+    backdrop-filter: blur(20px);
+  }
+  .form__subtitle-wrapper {
+    width: 399px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--clr-white);
+    padding: 25px 0 20px 0;
+  }
+  .hero__subtitle {
+    @include textStyle(
+      $FM: Inter,
+      $MB: 8px,
+      $FS: 30px,
+      $FW: 700,
+      $CLR: var(--clr-white),
+      $LH: 36.31px,
+      $CASE: none
+    );
+  }
+  .hero__form-text {
+    @include textStyle(
+      $FM: Inter,
+      $MB: 0,
+      $FS: 16px,
+      $FW: 400,
+      $CLR: var(--clr-white),
+      $LH: 19.36px,
+      $CASE: none
+    );
+  }
+  .hero__input-text {
+    @include textStyle(
+      $FM: Inter,
+      $MB: 8px,
+      $FS: 15px,
+      $FW: 400,
+      $CLR: var(--clr-white),
+      $LH: 18.15px,
+      $CASE: none
+    );
+    text-align: left;
+  }
+  .hero__input {
+    position: relative;
+    width: 399px;
+    padding: 16px 5px 16px 37px;
+    border-radius: 10px;
+    border: 1px solid var(--clr-white);
+    outline: none;
+    background-color: var(--clr-fakewhite);
+  }
+  .hero__input::placeholder {
+    @include textStyle(
+      $FM: Inter,
+      $MB: 0,
+      $FS: 16px,
+      $FW: 400,
+      $CLR: var(--clr-grwhite),
+      $LH: 19.36px,
+      $CASE: none
+    );
+  }
+  .hero__input:focus {
+    box-shadow: 0 0 5px 1px var(--clr-orange);
+  }
+  .hero__svg-image {
+    position: absolute;
+    left: 30px;
+    margin-top: 12px;
+    z-index: 50;
+  }
+  .hero__svg-image > path {
+    fill: var(--clr-grblack);
+  }
+  .hero__label {
+    width: 399px;
+    display: block;
+    margin: 0 auto;
+  }
+  .hero__label + .hero__label {
+    margin-top: 15px;
+  }
+  .hero__radios {
+    @include display($items: center, $space: center, $gap: 15px);
+    border-bottom: 1px solid var(--clr-white);
+    padding-bottom: 25px;
+  }
+  .hero__radio-label {
+    width: 192px;
+    background-color: var(--clr-fakewhite);
+    padding: 15px 5px 15px 15px;
+    border-radius: 10px;
+    position: relative;
+    content: "";
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20.57px;
+    color: var(--clr-black);
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--clr-black);
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .hero__radio {
+    display: none;
+  }
+  .hero__radio-label::before {
+    content: "";
+    height: 26px;
+    width: 26px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--clr-grblack);
+    display: inline-block;
+    margin-right: 12px;
+  }
+  .hero__radio:checked + .hero__radio-label::before {
+    background-color: greenyellow;
+    border: 1px solid var(--clr-orange);
+  }
+  .hero__radio:checked + .hero__radio-label {
+    background-color: var(--clr-orange);
+    border: 1px solid var(--clr-orange);
+    color: var(--clr-white);
+  }
+  
+  .hero__link {
+    display: inline-block;
+    margin: 0 auto;
+    font-family: Inter;
+    margin: 20px 0;
+    text-align: center;
+    transition: all 0.3s linear;
+  
+    @include buttonStyle(
+      $BTN_W: 399px,
+      $BTN_PY: 17px,
+      $BTN_BG_CLR: var(--clr-orange),
+      $BTN_BR_Radius: 10px,
+      $BTN_Border_CLR: var(--clr-orange),
+      $BTN_FS: 17px,
+      $BTN_FW: 500,
+      $BTN_LH: 20.57px,
+      $BTN_CLR: var(--clr-white),
+      $BTN_CASE: none
+    );
+  
+    &:hover {
+      cursor: pointer;
+      background-color: transparent;
+      color: var(--clr-orange);
+      border: 2 px solid var(--clr-orange);
+    }
+  }
+  .hero__texts-wrapper {
+    width: 576px;
+    margin-top: 43px;
+  }
+  .hero__star-wrapper {
+    @include display($items: center, $space: none, $gap: 10px);
+    margin-bottom: 8px;
+  }
+  .hero__star-text {
+    @include textStyle(
+      $FM: Inter,
+      $MB: 0,
+      $FS: 14px,
+      $FW: 500,
+      $CLR: var(--clr-white),
+      $LH: 16.94px,
+      $CASE: uppercase
+    );
+  }
+  .site__title {
+    @include textStyle(
+      $FM: Inter,
+      $MB: 20px,
+      $FS: 56px,
+      $FW: 700,
+      $CLR: var(--clr-white),
+      $LH: 67.77px,
+      $CASE: none
+    );
+  }
+  .hero__text {
+    @include textStyle(
+      $FM: Inter,
+      $MB: 0,
+      $FS: 20px,
+      $FW: 400,
+      $CLR: var(--clr-white),
+      $LH: 24.2px,
+      $CASE: none
+    );
+  }
+  
